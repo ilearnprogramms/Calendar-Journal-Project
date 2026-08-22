@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Comic Sans, cursive;
+    background: #FFFFFF;
+}
+
+button {
+    font-family: inherit;
+}
+
+.notebook {
+    width: 90vw;
+    max-width: 1200px;
+    height: 85vh;
+    margin: 7vh auto;
+
+    display: flex;
+
+    background: #f7f3e8;
+
+    border: 1px solid #d8d0c2;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+.left-page,
+.right-page {
+    width: 50%;
+    padding: 40px;
+}
+
+.left-page {
+    border-right: 1px solid #d8d0c2;
+}
+
+.text-element {
+    position: absolute;
+
+    padding: 8px 12px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border: 1px dashed #aaa;
+    border-radius: 4px;
+
+    cursor: move;
+
+    user-select: none;
+}
+
+.left-page h1,
+.right-page h1 {
+    margin-top: 0;
+    font-weight: normal;
+}
+
+.week-title {
+    color: #777;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.day-button {
+    display: block;
+
+    width: 100%;
+    padding: 14px;
+
+    margin-bottom: 8px;
+
+    text-align: left;
+
+    border: none;
+    border-radius: 6px;
+
+    background: transparent;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.day-button:hover {
+    background: #ebe5d8;
+}
+
+.day-button.selected {
+    background: #ddd4c4;
+    font-weight: bold;
+}
+
+.right-page {
+    background-color: #faf8ef;
+
+    background-image:
+        linear-gradient(#dfe8e8 1px, transparent 1px),
+        linear-gradient(90deg, #dfe8e8 1px, transparent 1px);
+
+    background-size: 25px 25px;
+}
+
+.right-page h1 {
+    margin-bottom: 5px;
+}
+
+.date {
+    color: #777;
+    margin-top: 0;
+}
+
+.journal-area {
+    position: relative;
+
+    margin-top: 50px;
+
+    height: 70%;
+
+    color: #555;
+    line-height: 1.8;
+}
