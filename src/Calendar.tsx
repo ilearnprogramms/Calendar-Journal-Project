@@ -48,6 +48,23 @@ function Calendar() {
 
         setTextElements([...textElements, newElement]); /* '...' spread operator (?) */
     }
+
+    function updateTextElement(
+        id: number,
+        newText: string
+    ) {
+        const updatedTextElements = textElements.map((element) => {
+    
+            if (element.id === id) {
+                return {
+                    ...element,
+                    text: newText
+                }; /* if true = make a new text object containing everything the old object had (id and coordinates). just replace the text.*/
+            }
+                return element;
+            });
+        setTextElements(updatedTextElements); /*set the state to the new version*/
+    }
     
     return (
         <div className="notebook">
@@ -95,10 +112,11 @@ function Calendar() {
                                 top: element.y
                             }}
                         >
-                            <input 
+                            <textarea 
                                 value={element.text}
                                 onChange={(event) => {
-                                    console.log(event.target.value);
+                                    updateTextElement(element.id, event.target.value);
+                                    /*take this specific/matching element id and change its text to whatever the user just typed.*/
                                 }}
                             />
                         </div>
