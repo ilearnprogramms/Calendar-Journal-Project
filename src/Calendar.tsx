@@ -71,10 +71,10 @@ function Calendar() {
 
             {/* LEFT PAGE */}
             <div className="left-page">
-                <h1> August 2026</h1>
+                <h1> September 2026</h1>
                 
                 <div className="week">
-                    <p className="week-title">WEEK 34 · 17 → 23</p>
+                    <p className="week-title">WEEK 37 · 7 → 13</p>
                     
                     {days.map((day) => (
                         <button
@@ -94,14 +94,14 @@ function Calendar() {
             {/* RIGHT PAGE */}
             <div className="right-page">
                 <h1>{selectedDay}</h1>
-                <p className="date">August 2026</p>
+                <p className="date">September 2026</p>
 
                 <div 
                     className="journal-area"
                     onDoubleClick={handleDoubleClick}
                     /*when this div gets double-clicked, calls handleDoubleClick*/
                 >
-                    <p>Double-click anywhere to add a new text</p>
+                    <p>Double-click anywhere to add a new text box!</p>
 
                     {textElements.map((element) => ( /*for every element in this array, create smth*/
                         <div
